@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Keels Home Page</title>
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,1,200" /> -->
+    <script src="https://kit.fontawesome.com/b8b79f3a7b.js" crossorigin="anonymous"></script>
+</head>
+
+<!-- Hello,
+Log into your
+account for a
+quick and easy
+shopping
+experience
+Happy shopping! -->
+<body>
+        <div class="root">
+            <div class="picture">
+                <div class="content">
+                    <div class="content__image"> 
+<img src="data:image/png;base64,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" class="img-fluid logo-view">
+                    </div>
+                    <h1>Hello,</h1>
+                    <h1>Log into your</h1>
+                    <h1>account for a</h1>
+                    <h1>quick and easy</h1>
+                    <h1>shopping</h1>
+                    <h1>experience</h1>
+                    <h1 class="content__last__child">Happy shopping!</h1>
+                </div>
+            </div>
+            <div class="actions">
+
+
+
+                <div class="conatiner container_1">
+                    <div class="container_content">
+                        <div class="icon">
+                            <i class="fas fa-heart fa-2xs"></i>
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path d="m24 41.95-2.05-1.85q-5.3-4.85-8.75-8.375-3.45-3.525-5.5-6.3T4.825 20.4Q4 18.15 4 15.85q0-4.5 3.025-7.525Q10.05 5.3 14.5 5.3q2.85 0 5.275 1.35Q22.2 8 24 10.55q2.1-2.7 4.45-3.975T33.5 5.3q4.45 0 7.475 3.025Q44 11.35 44 15.85q0 2.3-.825 4.55T40.3 25.425q-2.05 2.775-5.5 6.3T26.05 40.1Z"/></svg> -->
+                        </div>
+    
+                        <div>
+                            <h2><span class="higtlight">Donate</span> now</h2>
+                            <h6>Click here</h6>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="conatiner container_2">
+
+                    <div class="container_content">
+                        <div class="icon">
+                            <i class="fas fa-user fa-2xs"></i>
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path d="m24 41.95-2.05-1.85q-5.3-4.85-8.75-8.375-3.45-3.525-5.5-6.3T4.825 20.4Q4 18.15 4 15.85q0-4.5 3.025-7.525Q10.05 5.3 14.5 5.3q2.85 0 5.275 1.35Q22.2 8 24 10.55q2.1-2.7 4.45-3.975T33.5 5.3q4.45 0 7.475 3.025Q44 11.35 44 15.85q0 2.3-.825 4.55T40.3 25.425q-2.05 2.775-5.5 6.3T26.05 40.1Z"/></svg> -->
+                        </div>
+    
+                        <div>
+                            <h2>Already <span class="higtlight">Registered?</span></h2>
+                            <h6>Login here</h6>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="conatiner container_3">
+                    <div class="container_content">
+                        <div class="icon">
+                            <i class="fas fa-lock fa-2xs"></i>
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path d="m24 41.95-2.05-1.85q-5.3-4.85-8.75-8.375-3.45-3.525-5.5-6.3T4.825 20.4Q4 18.15 4 15.85q0-4.5 3.025-7.525Q10.05 5.3 14.5 5.3q2.85 0 5.275 1.35Q22.2 8 24 10.55q2.1-2.7 4.45-3.975T33.5 5.3q4.45 0 7.475 3.025Q44 11.35 44 15.85q0 2.3-.825 4.55T40.3 25.425q-2.05 2.775-5.5 6.3T26.05 40.1Z"/></svg> -->
+                        </div>
+    
+                        <div>
+                            <h2><span class="higtlight">New</span> to <span class="higtlight">Keels?</span></h2>
+                            <h6>Register here</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="conatiner container_4">
+                    <div class="container_content">
+                        <div class="icon">
+                            <i class="fas fa-thumbtack fa-2xs"></i>
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path d="m24 41.95-2.05-1.85q-5.3-4.85-8.75-8.375-3.45-3.525-5.5-6.3T4.825 20.4Q4 18.15 4 15.85q0-4.5 3.025-7.525Q10.05 5.3 14.5 5.3q2.85 0 5.275 1.35Q22.2 8 24 10.55q2.1-2.7 4.45-3.975T33.5 5.3q4.45 0 7.475 3.025Q44 11.35 44 15.85q0 2.3-.825 4.55T40.3 25.425q-2.05 2.775-5.5 6.3T26.05 40.1Z"/></svg> -->
+                        </div>
+    
+                        <div>
+                            <h2>Track <span class="higtlight">your order</span></h2>
+                            <h6>Click here</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="conatiner container_5">
+                    <div class="container_content">
+                        <div class="icon">
+                            <i class="fas fa-store fa-2xs"></i>
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path d="m24 41.95-2.05-1.85q-5.3-4.85-8.75-8.375-3.45-3.525-5.5-6.3T4.825 20.4Q4 18.15 4 15.85q0-4.5 3.025-7.525Q10.05 5.3 14.5 5.3q2.85 0 5.275 1.35Q22.2 8 24 10.55q2.1-2.7 4.45-3.975T33.5 5.3q4.45 0 7.475 3.025Q44 11.35 44 15.85q0 2.3-.825 4.55T40.3 25.425q-2.05 2.775-5.5 6.3T26.05 40.1Z"/></svg> -->
+                        </div>
+    
+                        <div>
+                            <h2>Borwse <span class="higtlight"> the store</span></h2>
+                            <h6>Click here</h6>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+</body>
+</html>

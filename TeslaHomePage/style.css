@@ -1,0 +1,524 @@
+@import url("./assets/fonts/GothamSSm-Book_Web.woff2");
+@import url("./assets/fonts/GothamSSm-Book_Web\ \(1\).woff2");
+@import url("./assets/fonts/GothamSSm-Medium_Web.woff2");
+@import url("./assets/fonts/GothamSSm-Medium_Web\ \(1\).woff2");
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    transition: all 1s ease-in;
+    scroll-behavior: smooth;
+}
+
+.only-desktop{
+    display: none;
+}
+
+.app__header {
+    display: grid;
+    grid-template-areas: 
+    'title actions'
+    ;
+    grid-auto-rows: 10vh;
+    position: sticky;
+    top: 0;
+    max-height: 10vh;
+}
+
+.links{
+    display: none;
+}
+
+.app__header__actions{
+    display: flex;
+    align-items: center;
+    grid-area: actions;
+    margin-left: auto;
+    margin-right: 1em;
+}
+
+.app__header__title{
+    display: grid;
+    place-items: center;
+    min-height: 10vh;
+    max-width: 200px;
+}
+
+.app__header__title svg {
+    scale: 0.8;
+}
+
+#tesla-model-y{
+    position: relative;
+    height: 90vh;
+}
+
+.tesla-model-y-img{
+    position: absolute;
+    z-index: -1;
+    background-image: url("./assets/Mobile-ModelY.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateY(-10vh);
+}
+
+.tesla-model-y-title,.tesla-model-y-description{
+    font-family: 'Roboto',sans-serif;
+    transform: translateY(5vh);
+}
+
+.header__links{
+    display: none;
+}
+
+.tesla-model-y-title{
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.tesla-model-y-description{
+    font-weight: 400;
+    margin: auto;
+    /* text-decoration: underline; */
+    width: fit-content;
+    border-bottom: 1px solid black;
+}
+
+
+
+.tesla-model-y-actions{
+    /* height: fit-content; */
+    /* margin-top: auto; */
+    width: 90%;
+    margin: auto;
+    height: 20vh;
+    transform: translateY(60vh);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+}
+
+.tesla-model-y-actions button{
+    margin: .5em;
+}
+
+#tesla-model-y svg{
+    transform: translateY(95vh);
+}
+
+.tesla-model-y-down{
+    display: flex;
+    justify-content: space-around;
+    transform: translateY(58vh);
+}
+
+.tesla-model-y-down i {
+    animation: ArrowDownUpAnimation 5s infinite linear;
+}
+
+
+
+@keyframes ArrowDownUpAnimation {
+    0%{
+        transform: translateY(0);
+    }
+    20%{
+        transform: translateY(5px);
+    }
+    30%{
+        transform: translateY(-5px);
+    }100%{
+        transform: translateY(0px);
+    }
+    
+    
+}
+
+
+
+/* Working with the menu */
+
+#menu-dialog{
+    opacity: 1;
+    width:80%;
+    max-width:400px;
+    height: 100vh;
+    max-height: 200vh;
+    border: none;
+    margin-left: auto;
+    animation: MenuDialogOpenAnimation 0.5s ease-out;
+}
+
+.menu-dialog-close-container{
+    width: 15%;
+    margin-left: auto;
+}
+
+.menu-dialog-close{
+    animation: MenuDialogCloseAnimation 0.5s ease-in !important;
+    display: none;
+    transform: translateX(100%);
+    /* backg
+    round-color: black; */
+}
+
+/* .menu-dialog-close {
+    opacity: 0;
+} */
+
+@keyframes MenuDialogOpenAnimation {
+    0%{
+        /* width:0%; */
+        transform: translateX(80%);
+        opacity: 0;
+    }
+    100%{
+        /* width: 80%; */
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes MenuDialogCloseAnimation {
+    0%{
+        /* width:100%; */
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100%{
+        /* width: 20%; */
+        transform: translateX(80%);
+        opacity: 0;
+    }
+}
+
+
+
+
+/* Menu Dialog Style */
+
+.menu-navigation-links-list{
+    list-style: none;
+}
+
+.menu-navigation-link-item{
+    margin: 1.5em;
+    margin-bottom: 2em;
+}
+
+.menu-navigation-link{
+    font-family: 'Roboto',sans-serif;
+    text-decoration: none;
+    color: #393c41;;
+}
+
+
+
+/* Setting backgrounds */
+.tesla-model-3-img{
+    background-image: url("./assets/images/m3-tesla-mobile.jpeg");
+}
+
+.tesla-model-s-img{
+    background-image: url("./assets/images/model-s-mobile.jpeg");
+}
+
+.tesla-model-x-img{
+    background-image: url("./assets/images/model-x-mobile.jpeg");
+}
+
+.tesla-model-solor-panel-img{
+    background-image: url("./assets/images/solor-panel-mobile.jpeg");
+}
+
+.tesla-model-solor-roof-panel-img{
+    background-image: url("./assets/images/Homepage-SolarRoof-Mobile-Global.png");
+}
+
+.tesla-cabel-img{
+    background-image: url("./assets/images/charge-cabel.jpeg");
+}
+
+@media (min-width: 1200px) {
+    .tesla-model-3-img {
+        background-image: url("./assets/images/m3-tesla-desktop.jpeg");
+    }
+
+    .tesla-model-s-img{
+        background-image: url("./assets/images/model-s-desktop.jpeg");
+    }
+
+    .tesla-model-x-img{
+        background-image: url("./assets/images/model-x-desktop.jpeg");
+    }
+
+    .tesla-model-solor-panel-img{
+        background-image: url("./assets/images/solor-panel-desktop.jpeg");
+    }
+
+    .tesla-model-solor-roof-panel-img{
+        background-image: url("./assets/images/Homepage-SolarRoof-Desktop-Global.png");
+    }
+
+    .tesla-cabel-img{
+        background-image: url("./assets/images/charge-cabel-desktop.jpeg");
+    }
+}
+
+
+
+/* All belong classes */
+
+
+
+.tesla-model-title,.tesla-model-description{
+    font-family: 'Roboto',sans-serif;
+    transform: translateY(25vh);
+}
+
+.tesla-model-title{
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.tesla-model-description{
+    font-weight: 400;
+    margin: auto;
+    /* text-decoration: underline; */
+    width: fit-content;
+    border-bottom: 1px solid black;
+}
+
+.tesla-model-img{
+    position: absolute;
+    z-index: -1;
+    /* background-image: url("./assets/Desktop-ModelY.jpeg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 105vh;
+    background-size: cover;
+    background-position: middle;
+    /* transform: translateY(-10vh); */
+}
+
+/* .tesla-model-actions{
+    width: 90%;
+    margin: auto;
+    height: 20vh;
+    transform: translateY(80vh);
+    display: flex;
+    flex-direction: column;
+} */
+
+.tesla-model-actions{
+    /* height: fit-content; */
+    /* margin-top: auto; */
+    width: 90%;
+    margin: auto;
+    height: 20vh;
+    transform: translateY(60vh);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+}
+
+
+.tesla-model-actions button{
+    margin: .5em;
+}
+
+
+
+.tesla-cabel-actions{
+    transform: translateY(90vh);
+}
+
+
+
+/* Media Query 1
+    When screen is bigger than 599px
+*/
+
+@media (min-width: 600px){
+
+    .app__header{
+        width: 90%;
+        margin: auto;
+    }
+
+    .tesla-model-y-img {
+        background-image: url("./assets/Desktop-ModelY.jpeg");
+        background-position: center;
+    }
+
+    .tesla-model-img{
+        background-position: center;
+    }
+
+    .tesla-model-y-actions{
+        margin: auto;
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .tesla-model-actions {
+        margin: auto;
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .btn-action{
+        min-width: 250px !important;
+        margin: 0 1em;
+    }
+
+
+    .tesla-model-y-actions{
+        transform: translateY(55vh);
+    }
+
+    .tesla-model-actions{ 
+        transform: translateY(65vh);
+    } 
+
+
+
+    .tesla-model-y-down{
+        transform: translateY(60vh);
+    }
+
+
+}
+
+
+
+/* Desktop Version */
+
+@media (min-width: 1200px){
+    .app__header{
+        grid-template-areas: 
+        'title title title links links links links links actions'
+        ;
+    }
+
+
+    .app__header__title{
+        width: 100%;
+        min-height: 100% !important;
+        grid-area: title;
+    }
+
+    .app__header__actions{
+        grid-area: actions;
+    }
+    .header__links{
+        grid-area: links;
+        display: block;
+        grid-gap: 5em;
+    }
+
+    .header__links__list{
+        width: 70%;
+        margin: auto;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+        min-width: 600px;
+    }
+
+
+    .header__links__list li {
+        margin: 0 15px;
+    }
+    .header__links__list a{
+        text-decoration: none;
+        color: #171a20;
+        /* font-weight: bold; */
+        font-family: 'Roboto';
+    }
+
+    .only-desktop{
+        display: block;
+    }
+
+    .tesla-model-actions{
+        transform: translateY(65vh);
+    }
+
+    .tesla-model-s-actions{
+        transform: translateY(70vh);
+    }
+
+    .tesla-cabel-actions{
+        transform: translateY(70vh);
+    }
+}
+
+
+.tesla-model-y-img{
+    z-index: -10;
+}
+
+.button__background__container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* min-height: 32px; */
+    /* min-width: 64px; */
+    background: rgb(255, 255, 255);
+    z-index: -5;
+    padding: 10px 0.5em;
+}
+
+.btn-header{
+    margin: 0 1em;
+}
+
+
+
+
+/* Tesla Model 3 */
+#tesla-model-3{
+    position: relative;
+    height: 100vh;
+    min-height: 100vh !important;
+}
+
+/* Tesla models */
+.tesla-model{
+    position: relative;
+    height: 100vh;
+    min-height: 100vh !important; 
+}
+
+
+
+
+.app_start__up{
+    /* display: none; */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
